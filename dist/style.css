@@ -1,0 +1,56 @@
+#cityName-input{
+    padding: 10px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+#searchBtn{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#searchByCity{
+}
+
+.input-div input{
+    outline: none;
+}
+
+
+.save{
+    background-color: lightgreen;
+    border-radius: 20px;
+
+}
+
+.save:hover{
+    background: rgb(76, 175, 80,0.9);
+}
+.delete{
+    background-color: lightcoral;
+     border-radius: 20px;
+}
+.delete:hover{
+    background: red
+}
+
+
+#results{
+    width: 95%;
+    display: grid;
+    background: lightblue;
+}
+
+.city{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    border-block-color: black;
+    justify-items: center;
+    border: blue;
+    margin: 20px;
+    background: lightcyan;
+    align-items: center;
+}
+

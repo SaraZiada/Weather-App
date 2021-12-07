@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    
+    <div class="header">
+        <input type="text" id="cityName-input" placeholder="Please Enter cityName">
+        <!-- <button id="searchBtn">get all cities</button> -->
+        <button id="searchByCity">Search By City</button>
+    </div>
+    <p></p>
+
+    <div id="results">
+    </div>
+
+    <script id="cities-template" type="text/x-handlebars">
+        {{#each cities}}
+        <div class = "city">
+            <div class="first">
+                    <button class="save"> Save </button>
+                    <button class="delete">Remove</button>
+            </div>
+            <div class="second">
+                <p>{{name}}</p>
+                <p>{{temperature}}</p>
+            </div>
+            <div class="third">
+                <p><img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png" alt={{conditionPic}} ></p>
+                <p>{{condition}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+    <script src="model.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
